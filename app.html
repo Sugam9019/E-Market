@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Market</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body id="body">
+
+    <header id="header">
+
+        <div class="logo-div">
+
+            <img class="logo" src="logo.jpg" alt="icon">
+            <h1>E-Market</h1>
+
+        </div>
+
+        <nav class="navbar">
+
+            <ul class="nav-items">
+
+                <li class="items"><a href="">Home</a></li>
+                <li class="items"><a href="">About</a></li>
+                <li class="items"><a href="">Contact</a></li>
+                <li class="items" onclick="Login()" id="login_link1">Login</li>
+                <li class="items user_item">
+                    <p id="user_name"></p>
+                </li>
+                <li class="img-item" onclick="mobile_view()"><img src="line.png" alt=""></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <div class="sidebar" id="sidebar-div">
+
+
+        <ul class="nav-items-2" id="sidebar">
+
+            <li>
+                <p id="user_name2"></p>
+            </li>
+
+
+            <li class="items"><a href="">Home</a></li>
+            <li class="items"><a href="">About</a></li>
+            <li class="items"><a href="">Contact</a></li>
+            <li class="items" onclick="Login()" id="login_link2"><a href="">Login</a></li>
+            <li class="items"><a href="">Wishlist</a></li>
+            <li class="items"><a href="">Cart</a></li>
+            <li class="cancel-icn" onclick="cancel()"><img src="cancel.png" alt=""></li>
+        </ul>
+
+
+    </div>
+
+    <section class="login-form">
+
+        <img src="./login_page_icons/cancel.png" alt="" class="cancel" onclick="login_cancel()">
+
+        <p>Login / Signup</p>
+
+        <form method="post">
+
+            <div class="field1 field">
+                <input type="text" name="" id="f1" name="" class="" placeholder="Name">
+                <img src="./login_page_icons/user_id.png" alt="">
+            </div>
+
+            <div class="filed2 field">
+                <input type="email" name="" id="f2" name="" class="" placeholder="Email">
+                <img src="./login_page_icons/mail.png" alt="">
+            </div>
+
+            <div class="filed3 field">
+                <input type="password" name="" id="f3" name="" class="" placeholder="Password">
+                <img src="./login_page_icons/password.png" alt="">
+            </div>
+
+            <div class="field4 ">
+                <input type="button" value="Login" onclick="Send_login()">
+            </div>
+
+        </form>
+
+        <p onclick="create_account()" class="p2">New to E-market? Create an account</p>
+
+    </section>
+
+    <section class="new-form">
+
+        <img src="./login_page_icons/cancel.png" alt="" class="cancel" onclick="cancel_register()">
+
+
+        <p> Welcome to E-Market </p>
+
+        <form method="post">
+
+            <div class="field1 field">
+                <input type="text" name="user_name" id="i1" name="" class="" placeholder="Name">
+                <img src="./login_page_icons/user_id.png" alt="">
+            </div>
+
+            <div class="filed2 field">
+                <input type="email" name="email" id="i2" name="" class="" placeholder="Email">
+                <img src="./login_page_icons/mail.png" alt="">
+            </div>
+
+            <div class="filed3 field">
+                <input type="password" name="password" id="i3" name="" class="" placeholder="Password">
+                <img src="./login_page_icons/password.png" alt="">
+            </div>
+
+            <div class="filed4 field">
+                <input type="password" name="p-number" id="i4" name="" class="" placeholder="Mobile Number">
+                <img src="./login_page_icons/call.png" alt="">
+            </div>
+
+
+            <div class="field5 ">
+                <input type="button" value="Register" onclick="send_register()">
+            </div>
+
+        </form>
+
+    </section>
+
+    <main id="main">
+
+
+        <section class="main-top">
+
+            <div class="search-bar">
+
+                <form class="search-bar-form">
+
+                    <button><img  src="https://cdn-icons-png.flaticon.com/128/9968/9968777.png" alt="search_icon" height="30vh"></button>
+                    <input type="text" id="product_name" name="product" placeholder="Search product.." />
+                    <!-- <input type="button"   style="background-color: red;" onclick="search_product()"> -->
+
+                </form>
+
+            </div>
+
+            <div class="user_cart">
+
+                <button class="wishlist"><img src="wish.png" alt="wish_icon"></button>
+
+                <div class="user_sub_cart">
+
+                    <div class="cart_count">0</div>
+                    <button class="cart" onclick="view_cart()"><img src="cart.png" alt="cart_icon"></button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="home_page">
+
+            <section class="catalog product_window">
+
+
+                <div class="catalog-list">
+
+                    <div class="catalog-item1 catalog-items">
+                        <figure>
+                            <img src="./catalog_imgs/mobile.jpg" alt="mobile" height="120px">
+                            <figcaption>Mobile</figcaption>
+                        </figure>
+                    </div>
+
+
+                    <div class="catalog-item2 catalog-items">
+                        <figure>
+                            <img src="./catalog_imgs/laptop.png" alt="" height="120px">
+                            <figcaption>Laptop</figcaption>
+                        </figure>
+                    </div>
+
+
+                    <div class="catalog-item3 catalog-items">
+                        <figure>
+                            <img src="./catalog_imgs/watch.avif" alt="" height="120px">
+                            <figcaption>Watch</figcaption>
+                        </figure>
+                    </div>
+
+
+                    <div class="catalog-item4 catalog-items">
+                        <figure>
+                            <img src="./catalog_imgs/camera.jpg" alt="" height="120px">
+                            <figcaption>Camera</figcaption>
+                        </figure>
+                    </div>
+
+
+                    <div class="catalog-item5 catalog-items">
+                        <figure>
+                            <img src="./catalog_imgs/tv.jpg" alt="" height="120px">
+                            <figcaption>Tv</figcaption>
+                        </figure>
+                    </div>
+
+
+                    <div class="catalog-item6 catalog-items">
+                        <figure>
+                            <img src="./catalog_imgs/stationary.jpg" alt="" height="120px">
+                            <figcaption>Stationary</figcaption>
+                        </figure>
+                    </div>
+
+
+                    <div class="catalog-item7 catalog-items">
+                        <figure>
+                            <img src="./catalog_imgs/music.avif" alt="" height="120px">
+                            <figcaption>Music</figcaption>
+                        </figure>
+                    </div>
+
+
+                    <div class="catalog-item8 catalog-items">
+                        <figure>
+                            <img src="./catalog_imgs/cloths.jpg" alt="" height="120px" width="120px">
+                            <figcaption>Cloths</figcaption>
+                        </figure>
+                    </div>
+
+
+                    <div class="catalog-item9 catalog-items">
+                        <figure>
+                            <img src="./catalog_imgs/furniture.jpg" alt="" height="120px">
+                            <figcaption>Furnitures</figcaption>
+                        </figure>
+                    </div>
+
+
+            </section>
+
+
+            <section class="offers product_window">
+
+                <section class="offer-section-1">
+
+                    <p>Up to 40% off | Deals on trending Brands</p>
+
+                    <div class="brand_deals">
+                        <div class="brand1 brand"><img src="./offer-section-1/puma.png"></div>
+                        <div class="brand2 brand"><img src="./offer-section-1/boat.png"></div>
+                        <div class="brand3 brand"><img src="./offer-section-1/asus.png"></div>
+                        <div class="brand4 brand"><img src="./offer-section-1/pe.png"></div>
+                    </div>
+
+                </section>
+
+
+
+                <section class="offer-section-2">
+
+                    <p>Up to 30% off | on Home appliances </p>
+
+                    <div class="brand_deals">
+                        <div class="brand1 brand"><img src="./ofer-section-2/Ac.jpg"></div>
+                        <div class="brand2 brand"><img src="./ofer-section-2/fridge.webp"></div>
+                        <div class="brand3 brand"><img src="./ofer-section-2/oven.avif"></div>
+                        <div class="brand4 brand"><img src="./ofer-section-2/washing_machine.webp"></div>
+                    </div>
+
+                </section>
+
+
+                <section class="offer-section-3">
+
+                    <p>Up to 10% off | on smartphones</p>
+
+                    <div class="brand_deals">
+                        <div class="brand1 brand"><img src="./offer-section-3/mobile1.webp"></div>
+                        <div class="brand2 brand"><img src="./offer-section-3/mobile2.png"></div>
+                        <div class="brand3 brand"><img src="./offer-section-3/mobile3.webp"></div>
+                        <div class="brand4 brand"><img src="./offer-section-3/mobile4.jpg"></div>
+                    </div>
+
+                </section>
+
+            </section>
+
+
+            <section class="trending-deals product_window">
+
+                <p>Trending Deals | only for limited period</p>
+
+                <section class="scrollbar">
+
+                    <div class="right-scroll scrollbar_items item1" onclick="right_scroll()">></div>
+
+                    <div class="scrollbar_items item1">
+                        <img src="./scrollbar_images/image1.jpg" alt="">
+                        <div class="caption">&#x20B9; 149 and under </div>
+                    </div>
+
+                    <div class="scrollbar_items item2">
+                        <img src="./scrollbar_images/image2.jpg" alt="">
+                        <div class="caption">&#x20B9; 199 and under </div>
+                    </div>
+
+                    <div class="scrollbar_items item3">
+                        <img src="./scrollbar_images/image3.jpg" alt="">
+                        <div class="caption">&#x20B9; 129 and under </div>
+                    </div>
+
+                    <div class="scrollbar_items item4">
+                        <img src="./scrollbar_images/image4.jpg" alt="">
+                        <div class="caption">&#x20B9; 449 and under </div>
+                    </div>
+
+                    <div class="scrollbar_items item5">
+                        <img src="./scrollbar_images/image5.webp" alt="">
+                        <div class="caption">&#x20B9; 249 and under </div>
+                    </div>
+
+                    <div class="scrollbar_items item6">
+                        <img src="./scrollbar_images/image6.jpg" alt="">
+                        <div class="caption">&#x20B9; 199 and under </div>
+                    </div>
+
+                    <div class="scrollbar_items item7">
+                        <img src="./scrollbar_images/image7.jpg" alt="">
+                        <div class="caption">&#x20B9; 999 and under </div>
+                    </div>
+
+                    <div class="scrollbar_items item8">
+                        <img src="./scrollbar_images/image8.png" alt="">
+                        <div class="caption">&#x20B9; 249 and under </div>
+                    </div>
+
+                    <div class="scrollbar_items item9">
+                        <img src="./scrollbar_images/image9.webp" alt="">
+                        <div class="caption">&#x20B9; 299 and under </div>
+                    </div>
+
+                    <div class="scrollbar_items item10">
+                        <img src="./scrollbar_images/image10.jpg" alt="">
+                        <div class="caption">&#x20B9; 289 and under </div>
+                    </div>
+
+                    <div class="scrollbar_items item11">
+                        <img src="./scrollbar_images/image11.jpg" alt="">
+                        <div class="caption">&#x20B9; 4,999 and under </div>
+                    </div>
+
+                    <div class="scrollbar_items item12">
+                        <img src="./scrollbar_images/image12.jpg" alt="">
+                        <div class="caption">&#x20B9; 20,999 and under </div>
+                    </div>
+
+                    <div class="left-scroll scrollbar_items item1" onclick="left_scroll()">
+                        <</div>
+
+                </section>
+
+
+
+            </section>
+
+
+            <section class="bank-offers product_window">
+
+                <div class="bank-names">
+
+                    <div class="banks bank1" id="bank1"><img src="./Bank-offers/SBI.png" alt=""></div>
+                    <div class="banks bank2" id="bank2"><img src="./Bank-offers/ICICI.png" alt=""></div>
+                    <div class="banks bank3" id="bank3"><img src="./Bank-offers/HDFC.png" alt=""></div>
+                    <div class="banks bank4" id="bank4"><img src="./Bank-offers/AXIS.png" alt=""></div>
+
+                </div>
+
+                <div class="scroll-btns">
+
+                    <input type="radio" id="r1" name="x" onclick="bank_radio_btn(this)" checked>
+                    <input type="radio" id="r2" name="x" onclick="bank_radio_btn(this)">
+                    <input type="radio" id="r3" name="x" onclick="bank_radio_btn(this)">
+                    <input type="radio" id="r4" name="x" onclick="bank_radio_btn(this)">
+
+                </div>
+
+            </section>
+
+
+            <section class="offers2 product_window">
+
+                <section class="offers2-section-1">
+
+                    <p>20% cashback on first order | Beauty & makeup</p>
+
+                    <div class="sub-section-1">
+
+
+                        <div class="brands brand1"><img src="./offer-section-4/product1.webp" alt=""></div>
+                        <div class="brands brand2"><img src="./offer-section-4/product2.webp" alt=""></div>
+                        <div class="brands brand3"><img src="./offer-section-4/product3.webp" alt=""></div>
+                        <div class="brands brand4"><img src="./offer-section-4/product4.jpg" alt=""></div>
+
+                    </div>
+
+                </section>
+
+                <section class="offers2-section-2">
+
+                    <p>Up to 10% off | Deals on Gaming laptops</p>
+
+                    <div class="sub-section-2">
+
+
+                        <div class="brands brand1"><img src="./offer-section-5/laptop1.jpg" alt=""></div>
+                        <div class="brands brand2"><img src="./offer-section-5/laptop2.jpg" alt=""></div>
+                        <div class="brands brand3"><img src="./offer-section-5/laptop3.jpg" alt=""></div>
+                        <div class="brands brand4"><img src="./offer-section-5/laptop4.jpg" alt=""></div>
+
+                    </div>
+
+                </section>
+
+                <section class="offers2-section-3">
+
+                    <p>28% cashback on first order | Restyle your home</p>
+
+                    <div class="sub-section-3">
+
+
+                        <div class="brands brand1"><img src="./offer-section-6/decorative1.webp" alt=""></div>
+                        <div class="brands brand2"><img src="./offer-section-6/decorative2.avif" alt=""></div>
+                        <div class="brands brand3"><img src="./offer-section-6/decorative3.jpg" alt=""></div>
+                        <div class="brands brand4"><img src="./offer-section-6/decorative4.jpg" alt=""></div>
+
+                    </div>
+
+                </section>
+
+
+            </section>
+
+
+            <section class="E-deals product_window">
+
+                <p>Best Offers on trending Electronics </p>
+
+                <div class="E-collections">
+
+                    <div class="right-scroll scrollbar_items item1" onclick="scroll_right()">></div>
+
+
+                    <div class="items item">
+                        <img src="./E-collections/product1.jpg" alt="">
+                        <div class="caption">&#x20B9; 4,999 and under </div>
+                    </div>
+
+                    <div class="items item">
+                        <img src="./E-collections/product2.jpg" alt="">
+                        <div class="caption">&#x20B9; 4,999 and under </div>
+                    </div>
+
+                    <div class="items item">
+                        <img src="./E-collections/product3.webp" alt="">
+                        <div class="caption">&#x20B9; 25,999 and under </div>
+                    </div>
+
+                    <div class="items item">
+                        <img src="./E-collections/product4.jpg" alt="">
+                        <div class="caption">&#x20B9; 49,999 and under </div>
+                    </div>
+
+                    <div class="items item">
+                        <img src="./E-collections/product5.jpg" alt="">
+                        <div class="caption">&#x20B9; 1,999 and under </div>
+                    </div>
+
+                    <div class="items item">
+                        <img src="./E-collections/product6.webp" alt="">
+                        <div class="caption">&#x20B9; 2,999 and under </div>
+                    </div>
+
+                    <div class="items item">
+                        <img src="./E-collections/product7.webp" alt="">
+                        <div class="caption">&#x20B9; 22,999 and under </div>
+                    </div>
+
+                    <div class="items item">
+                        <img src="./E-collections/product8.jpg" alt="">
+                        <div class="caption">&#x20B9; 1,499 and under </div>
+                    </div>
+
+                    <div class="items item">
+                        <img src="./E-collections/product9.jpg" alt="">
+                        <div class="caption">&#x20B9; 47,999 and under </div>
+                    </div>
+
+                    <div class="items item">
+                        <img src="./E-collections/product10.jpg" alt="">
+                        <div class="caption">&#x20B9; 4,999 and under </div>
+                    </div>
+
+                    <div class="items item">
+                        <img src="./E-collections/product11.jpeg" alt="">
+                        <div class="caption">&#x20B9; 12,999 and under </div>
+                    </div>
+
+                    <div class="items item">
+                        <img src="./E-collections/product12.jpg" alt="">
+                        <div class="caption">&#x20B9; 1,499 and under </div>
+                    </div>
+
+                    <div class="left-scroll scrollbar_items item1" onclick="scroll_left()">
+                        <</div>
+
+                    </div>
+
+            </section>
+
+
+            <section class="banner-section1 product_window">
+
+                <div class="banner1">
+                    <p>Best Offers on Electronics </p>
+                    <div class="banner_div"> <img src="./offer-section-7/banner1.jpg" alt=""> </div>
+                </div>
+
+                <div class="banner2">
+                    <p>Best offers on Fashion</p>
+                    <div class="banner_div"><img src="./offer-section-7/banner2.jpg" alt=""></div>
+                </div>
+
+            </section>
+
+
+            <section class="banner-section2 product_window">
+
+                <div class="banner3">
+                    <p>Best Offers on Beauty Products </p>
+                    <div class="banner_div"> <img src="./offer-section-7/banner3.avif" alt=""> </div>
+                </div>
+
+                <div class="banner4">
+                    <p>Best offers on Furnitures</p>
+                    <div class="banner_div"><img src="./offer-section-7/banner4.jpg" alt=""></div>
+                </div>
+
+            </section>
+
+        </section>
+
+        <section class="display_products">
+        </section>
+
+        <section class="cart_main">
+
+            <p id="cart_text">Your Cart ..</p>
+            <section class="cart_products">
+            </section>
+
+        </section>
+
+    </main>
+
+    <section class="buy_product">
+
+        <p id="checkout">Checkout</p>
+
+        <section class="user_data">
+
+            <section class="ip1">
+                <label for="name">Full Name &nbsp; &nbsp; &nbsp;</label>
+                <input type="text" name="name" id="name" required/>
+            </section>
+
+
+            <section class="ip2">
+                <label for="phon_number">Mobile Number</label>
+                <input type="tel" name="phon_number" id="phon_number" required>
+            </section>
+
+
+            <section class="ip3">
+                <label for="address">Delivery address</label>
+                <input type="text" name="address" id="address" required/>
+            </section>
+
+
+            <section class="ip4">
+                <label>Payment Methods </label><br>
+
+                <section class="payment_options">
+
+
+                    <input type="radio" name="payment" id="Card " value="card"  class="payment1" required>
+                    <label for="Card" class="payment_type">Credit or Debit Card</label><br>
+
+                    <input type="radio" name="payment" id="upi" value="UPI" class="payment2" required>
+                    <label for="upi" class="payment_type">UPI</label><br>
+
+                    <input type="radio" name="payment" id="net_banking" value="Net Banking" class="payment3" required>
+                    <label for="net_banking" class="payment_type">Net Banking</label><br>
+
+                    <input type="radio" name="payment" id="COD" value="Cash on Delivery" class="payment4" required>
+                    <label for="COD" class="payment_type">Cash on Delivery</label><br>
+
+                </section>
+
+            </section>
+
+        </section>
+
+        <section class="product_details">
+
+            <div id="product_image"></div>
+            <div id="product_info"></div>
+
+        </section>
+
+        <section class="button">
+
+            <input type="button" value="Cancel" id="cancel" class="btns" onclick="cancel_purchase()">
+            <input type="button" value="Proceed" id="proceed" class="btns" onclick="proceed_purchase()">
+
+        </section>
+
+    </section>
+
+    <section class="purchase_confirmation">
+
+        <div class="section1">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/1004/1004739.png" alt="confirmation"> 
+
+            <div class="message">
+                <p id="p1">Thank you for shopping with E-Market !</p>
+                <p id="p2">check your Email for Purchase Summery</p> 
+            </div>
+
+        </div>
+
+        <div class="section2">
+ 
+            <button id="home" onclick="go_to_home()">
+                <img src="https://cdn-icons-png.flaticon.com/128/2550/2550264.png" alt="home_icon">
+            </button>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <p class="p1">E-Market</p>
+
+        <div class="footer-icons">
+
+            <ul>
+
+                <li><img src="./footer-icons/facebook.png" alt=""></li>
+                <li>|</li>
+                <li><img src="./footer-icons/insta.png" alt=""></li>
+                <li>|</li>
+                <li><img src="./footer-icons/twitter.png" alt=""></li>
+                <li>|</li>
+                <li><img src="./footer-icons/pintetrest.png" alt=""></li>
+
+            </ul>
+
+        </div>
+
+        <div class="footer-links">
+
+            <ul>
+
+                <li><a href="#">Legal Stuff</a></li>
+                <li>|</li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li>|</li>
+                <li><a href="#">Security</a></li>
+
+            </ul>
+
+        </div>
+
+        <p class="p2">Copyright &copy; E-Market, Inc.</p>
+
+
+    </footer>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>{{result}}</h1>
+
+<form action="./add_seller_products" method="post">
+
+    <div class="f1">
+        <label for="i1">Category</label>
+        <select name="category" id="i1" name="category">
+            <option value="mobile">Mobile</option>
+            <option value="home appliance">Home Appliances</option>
+            <option value="fashion">Fashion</option>
+            <option value="watch">Smart watch</option>
+            <option value="camera">Camera</option>
+            <option value="stationary">Stationary</option>
+            <option value="Electroncs">Electronics</option>
+            
+        </select>
+    </div>
+
+    <div class="f2">
+        <input type="text" name="product_name" id="" placeholder="Product Name">
+    </div>
+    
+    
+    
+    <div class="f3">
+        <input type="text" name="product_price" id="" placeholder="Product Price" min="0">
+    </div>
+
+    <div class="f4">
+        <input type="text" name="product_link" id="" placeholder="Product Image Link">
+    </div>
+
+
+    
+    <div class="f5">
+        <input type="submit"  value="Register Product">
+    </div>
+
+    
+
+</form>
+
+
+</body>
+</html>

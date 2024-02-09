@@ -524,7 +524,7 @@ function buy_product(product) {
 
     
 
-    // if(email){
+    if(email){
 
         
         document.querySelector(".buy_product").style.display = "block";
@@ -560,12 +560,12 @@ function buy_product(product) {
         document.querySelector("#product_info").appendChild(product_price);
         
     }
-    // else{
-    //     alert("Please Login ..")
-    // }
+    else{
+        alert("Please Login ..")
+    }
 
 
-// }
+}
 
 
 function cancel_purchase(){
@@ -583,7 +583,7 @@ async function proceed_purchase(){
 
     const email = sessionStorage.getItem("email");
     
-    // if(email){
+    if(email){
 
         let user_name=document.querySelector("#name").value;
         let user_mobile_number=document.querySelector("#phon_number").value;
@@ -636,10 +636,10 @@ async function proceed_purchase(){
 
 
 
-    // }
-    // else{
-    //     alert("Please Login ..");
-    // }
+    }
+    else{
+        alert("Please Login ..");
+    }
 
 }
 

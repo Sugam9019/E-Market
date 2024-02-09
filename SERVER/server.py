@@ -44,8 +44,8 @@ def db_read(data):
 
 
 def product_insert(product):
-    if(len(product)==4):
-        cursor.execute("insert into products values('"+product['category']+"','"+product['product_name']+"','"+product['product_link']+"','"+product['product_price']+"')")
+    if(len(product)==5):
+        cursor.execute("insert into products values('"+product['category']+"','"+product['product_name']+"','"+product['product_link']+"','"+product['product_price']+"','"+product['product_Id']+"')")
         db_connect.commit()
     return
     
@@ -166,7 +166,7 @@ def seller():
 def register_product():
     if(request.method=="POST"):
         product=request.form
-        # print((product))
+        print((product))
         product_insert(product)
 
     
